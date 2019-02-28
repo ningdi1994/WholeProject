@@ -8,8 +8,9 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
 import javax.servlet.http.HttpServletRequest;
+
 @Component
-public class MyFilter extends ZuulFilter {
+public class ZuulLogginFilter extends ZuulFilter {
 
     private Logger logger = LoggerFactory.getLogger(this.getClass());
     @Override
