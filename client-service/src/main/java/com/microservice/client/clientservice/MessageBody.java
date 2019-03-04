@@ -1,9 +1,21 @@
 package com.microservice.client.clientservice;
 
+import com.fasterxml.jackson.annotation.JsonAlias;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class MessageBody {
 
+    @JsonProperty("random id")
+    @JsonAlias("id")
     private Integer id;
+
+    @JsonAlias("name")
+    @JsonProperty("user name")
     private String name;
+
+
+    @JsonProperty("server port number")
+    @JsonAlias("port")
     private String port;
 
     public String getPort() {

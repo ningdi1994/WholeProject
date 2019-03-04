@@ -13,5 +13,5 @@ import org.springframework.web.bind.annotation.PathVariable;
 @RibbonClient(name = "server-service")
 public interface ServerProxy {
     @GetMapping("/server-service/hi/{id}")
-    ResponseEntity<MessageBody> getHiFromServer(@PathVariable("id") String id);
+    MessageBody getHiFromServer(@PathVariable("id") String id);
 }

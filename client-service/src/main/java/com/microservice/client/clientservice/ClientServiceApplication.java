@@ -18,7 +18,7 @@ public class ClientServiceApplication {
         SpringApplication.run(ClientServiceApplication.class, args);
     }
 
-//
+
 //    @Bean
 //    @LoadBalanced
 //    public RestTemplate getRestTemplate(){
