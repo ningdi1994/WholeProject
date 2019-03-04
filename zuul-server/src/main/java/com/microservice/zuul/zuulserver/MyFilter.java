@@ -1,11 +1,14 @@
 package com.microservice.zuul.zuulserver;
 
 import com.netflix.zuul.ZuulFilter;
+import com.netflix.zuul.context.RequestContext;
 import com.netflix.zuul.exception.ZuulException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+
+import javax.servlet.http.HttpServletRequest;
+
 @Component
 public class MyFilter extends ZuulFilter {
     private Logger logger = LoggerFactory.getLogger(this.getClass());
@@ -26,7 +29,8 @@ public class MyFilter extends ZuulFilter {
 
     @Override
     public Object run() throws ZuulException {
-        logger.info("//////////////");
+        HttpServletRequest request = RequestContext.getCurrentContext().getRequest();
+        logger.info("request -> {} request URI -> {}",request,request.getRequestURI());
         return null;
     }
 }
