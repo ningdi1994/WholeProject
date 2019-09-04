@@ -1,24 +1,21 @@
-package com.microservice.zuul.zuulserver;
+package com.calculator.calculatorserver;
 
 import brave.sampler.Sampler;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
-import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
 @EnableDiscoveryClient
-@EnableZuulProxy
-public class ZuulServerApplication {
+public class CalculatorServerApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(ZuulServerApplication.class, args);
+        SpringApplication.run(CalculatorServerApplication.class, args);
     }
 
-
     @Bean
-    public Sampler getSample(){
+    public Sampler getSampler(){
         return Sampler.ALWAYS_SAMPLE;
     }
 }

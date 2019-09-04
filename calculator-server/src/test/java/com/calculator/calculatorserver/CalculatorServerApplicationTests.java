@@ -1,4 +1,4 @@
-package com.microservice.zuul.zuulgatewayserver;
+package com.calculator.calculatorserver;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -7,10 +7,10 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class ZuulGatewayServerApplicationTests {
+public class CalculatorServerApplicationTests {
 
-	@Test
-	public void contextLoads() {
-	}
+    @Test
+    public void contextLoads() {
+    }
 
 }
